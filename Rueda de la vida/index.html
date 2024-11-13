@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rueda de la Vida</title>
+    <link rel="icon" href="https://img.icons8.com/3d-fluency/94/synchronize.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rueda de la Vida</h1>
+        <h2>Herramienta de Autoconocimiento</h2>
+        <p>Identifica en cada área tu grado de satisfacción, donde 1 representa "insatisfacción total" y 10 " máxima satisfacción"</p>
+        <form id="dataForm">
+            <label for="amigos">Amigos:</label>
+            <input type="number" id="amigos" min="1" max="10" oninput="validarRango(this)">
+            
+            <label for="salud">Salud:</label>
+            <input type="number" id="salud" min="1" max="10" oninput="validarRango(this)">
+            
+            <label for="finanzas">Finanzas/economía:</label>
+            <input type="number" id="finanzas" min="1" max="10" oninput="validarRango(this)">
+            
+            <label for="Trabajo">Trabajo:</label>
+            <input type="number" id="trabajo" min="1" max="10" oninput="validarRango(this)">
+            
+            <label for="diversion">Diversión/ocio:</label>
+            <input type="number" id="diversion" min="1" max="10" oninput="validarRango(this)">
+            
+            <label for="parejas">Relaciones de parejas:</label>
+            <input type="number" id="parejas" min="1" max="10" oninput="validarRango(this)">
+            
+            <label for="personal">Desarrollo personal:</label>
+            <input type="number" id="personal" min="1" max="10" oninput="validarRango(this)">
+            
+            <label for="familia">Familia:</label>
+            <input type="number" id="familia" min="1" max="10" oninput="validarRango(this)">
+            
+            <button type="button" onclick="generateChart()">Generar Gráfico</button>
+        </form>
+        <canvas id="myChart"></canvas>
+        <button type="button" id="exportButton" hidden onclick="exportChart()">Exportar a PDF</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+    <footer>
+        <p>© 2024 Rueda del Deportista. Todos los derechos reservados.</p>
+        <p>Desarrollado por: Baudracco Alejandro Javier</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/alejandrojavier.baudracco" target="_blank">
+                <img src="https://img.icons8.com/fluency/48/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.linkedin.com/in/alejandro-baudracco-22553094/" target="_blank" title="LinkedIn">
+                <img src="https://img.icons8.com/fluency/48/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="https://img.icons8.com/fluency/48/instagram-new.png" alt="Instagram">
+            </a>
+        </div>
+    </footer>    
+</body>
+</html>
