@@ -67,6 +67,8 @@ Las contribuciones son bienvenidas. Si deseas contribuir, por favor sigue los si
 
 ## Acceso desde la web
 
+https://ruedadelavida.netlify.app
+
 ## Autor: 
  * Baudracco Alejandro Javier
 
